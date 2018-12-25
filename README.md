@@ -75,10 +75,10 @@ function Body() {
   return <div />;
 }
 const app = <App />;
-// app = <body>
+// app = "<body>
 //   <navbar></<navbar>
 //   <div></div>
-// </body>;
+// </body>";
 ```
 
 ### Async mode
@@ -111,7 +111,7 @@ const app = require('express')();
 app.get('/movies/search', async function(req, res) {
   res.send(await <App searchParam={req.query.search} />);
   // sends out
-  // <ul>
+  // "<ul>
   //   <li>
   //     Avengers<span class="director">Anthony Russo</span>
   //   </li>
@@ -119,6 +119,6 @@ app.get('/movies/search', async function(req, res) {
   //     A star is born<span class="director">Bradley Cooper</span>
   //   </li>
   //   ...
-  // </ul>
+  // </ul>"
 });
 ```
