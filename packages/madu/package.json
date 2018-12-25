@@ -5,5 +5,8 @@
   "repository": "https://github.com/tanhauhau/madu.git",
   "author": "Tan Li Hau <lhtan93@gmail.com>",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "pretty": "^2.0.0"
+  }
 }

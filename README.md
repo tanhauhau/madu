@@ -27,17 +27,16 @@ async function App({ searchParam }) {
 const app = require('express')();
 app.get('/movies/search', async function(req, res) {
   res.send(await <App searchParam={req.query.search} />);
-  /* sends out
-  <ul>
-    <li>
-      Avengers<span class="director">Anthony Russo</span>
-    </li>
-    <li>
-      A star is born<span class="director">Bradley Cooper</span>
-    </li>
-    ...
-  </ul>
-  */
+  // sends out
+  // <ul>
+  //   <li>
+  //     Avengers<span class="director">Anthony Russo</span>
+  //   </li>
+  //   <li>
+  //     A star is born<span class="director">Bradley Cooper</span>
+  //   </li>
+  //   ...
+  // </ul>
 });
 ```
 
