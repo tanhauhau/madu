@@ -1,0 +1,11 @@
+{
+  "name": "@madu/babel-transform-madu",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tanhauhau/madu.git",
+  "author": "Tan Li Hau <lhtan93@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.2.0"
+  }
+}

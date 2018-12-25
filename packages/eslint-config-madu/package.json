@@ -1,0 +1,11 @@
+{
+  "name": "@madu/eslint-config-madu",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tanhauhau/madu.git",
+  "author": "Tan Li Hau <lhtan93@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint-plugin-react": "^7.11.1"
+  }
+}

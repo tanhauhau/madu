@@ -1,0 +1,9 @@
+{
+  "name": "@madu/madu",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/tanhauhau/madu.git",
+  "author": "Tan Li Hau <lhtan93@gmail.com>",
+  "license": "MIT",
+  "dependencies": {}
+}
