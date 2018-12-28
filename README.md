@@ -1,4 +1,6 @@
-# WIP: Madu
+# Madu
+
+> Note: this is not production ready.
 
 Write `jsx` as if is `html` string.
 
@@ -122,3 +124,14 @@ app.get('/movies/search', async function(req, res) {
   // </ul>"
 });
 ```
+
+## The Damu-Madu Project
+
+The Damu-Madu sister project aims to bring the developer experience of writing JSX (XML in JavaScript) without having to use React.
+
+JSX is independent of React, you don't have to use React just to use JSX in your development process.
+
+The Damu-Madu sister project contains solution for both client render and server render:
+
+- [madu](https://github.com/tanhauhau/madu) - Writing jsx as if html string
+- [damu](https://github.com/tanhauhau/damu) - Converts jsx to vanilla javascript
