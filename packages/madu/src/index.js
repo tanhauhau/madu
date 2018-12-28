@@ -1,9 +1,6 @@
-const { Fragment } = require('./enum');
-const renderString = require('./render-string');
+const MaduSync = require('./sync');
+const MaduAsync = require('./async');
 
-const Madu = {
-  renderString,
-  Fragment,
-};
-
-module.exports = Madu;
+module.exports = MaduSync;
+module.exports.MaduAsync = MaduAsync;
+module.exports.MaduSync = MaduSync;

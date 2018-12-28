@@ -87,7 +87,7 @@ In async mode, `jsx` can be think of `Promise<string>`
 This allows you to fetch data in the component function.
 
 ```jsx
-const Madu = require('@madu/madu/async');
+const { MaduAsync: Madu } = require('@madu/madu');
 
 function MovieList({ movies }) {
   return (
