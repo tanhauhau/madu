@@ -2,15 +2,15 @@ import test from 'ava';
 import { MaduAsync as Madu } from '../src';
 import pretty from 'pretty';
 
-test('<div />', async t => {
+test('Simple', async t => {
   t.snapshot(format(await <div />));
 });
 
-test('<div foo="bar" num={1} boo={true} />', async t => {
+test('With attributes', async t => {
   t.snapshot(format(await <div foo="bar" num={1} boo={true} />));
 });
 
-test('with children', async t => {
+test('With children', async t => {
   t.snapshot(
     format(
       await (
@@ -23,7 +23,7 @@ test('with children', async t => {
   );
 });
 
-test('with children array', async t => {
+test('With children array', async t => {
   t.snapshot(
     format(
       await (
@@ -40,7 +40,7 @@ test('with children array', async t => {
   );
 });
 
-test('with conditional children array', async t => {
+test('With conditional children array', async t => {
   t.snapshot(
     format(
       await (
@@ -54,21 +54,21 @@ test('with conditional children array', async t => {
   );
 });
 
-test('with function 1', async t => {
+test('With function 1', async t => {
   function App() {
     return <div>{'App'}</div>;
   }
   t.snapshot(format(await <App />));
 });
 
-test('with function return null', async t => {
+test('With function return null', async t => {
   function App() {
     return null;
   }
   t.snapshot(format(await <App />));
 });
 
-test('with nested function', async t => {
+test('With nested function', async t => {
   function App() {
     return (
       <div>
@@ -86,7 +86,7 @@ test('with nested function', async t => {
   t.snapshot(format(await <App />));
 });
 
-test('with function props', async t => {
+test('With function props', async t => {
   function App({ headerClass, bodyClass }) {
     return (
       <div>
@@ -106,7 +106,7 @@ test('with function props', async t => {
   );
 });
 
-test('with conditional function array', async t => {
+test('With conditional function array', async t => {
   function App({ list }) {
     return (
       <ul>
@@ -138,7 +138,7 @@ test('with conditional function array', async t => {
   );
 });
 
-test('with fragment', async t => {
+test('With fragment', async t => {
   function App() {
     return (
       <>
@@ -156,7 +156,7 @@ test('with fragment', async t => {
   t.snapshot(format(await <App />));
 });
 
-test('with render props', async t => {
+test('With render props', async t => {
   function RenderProps({ children }) {
     return <ul>{children([1, 2, 3, 4, 5])}</ul>;
   }

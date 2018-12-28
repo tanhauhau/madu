@@ -2,15 +2,15 @@ import test from 'ava';
 import Madu from '../src';
 import pretty from 'pretty';
 
-test('<div />', t => {
+test('Simple', t => {
   t.snapshot(format(<div />));
 });
 
-test('<div foo="bar" num={1} boo={true} />', t => {
+test('With attributes', t => {
   t.snapshot(format(<div foo="bar" num={1} boo={true} />));
 });
 
-test('with children', t => {
+test('With children', t => {
   t.snapshot(
     format(
       <div>
@@ -21,7 +21,7 @@ test('with children', t => {
   );
 });
 
-test('with children array', t => {
+test('With children array', t => {
   t.snapshot(
     format(
       <ul>
@@ -36,7 +36,7 @@ test('with children array', t => {
   );
 });
 
-test('with conditional children array', t => {
+test('With conditional children array', t => {
   t.snapshot(
     format(
       <ul>
@@ -48,21 +48,21 @@ test('with conditional children array', t => {
   );
 });
 
-test('with function 1', t => {
+test('With function 1', t => {
   function App() {
     return <div>{'App'}</div>;
   }
   t.snapshot(format(<App />));
 });
 
-test('with function return null', t => {
+test('With function return null', t => {
   function App() {
     return null;
   }
   t.snapshot(format(<App />));
 });
 
-test('with nested function', t => {
+test('With nested function', t => {
   function App() {
     return (
       <div>
@@ -80,7 +80,7 @@ test('with nested function', t => {
   t.snapshot(format(<App />));
 });
 
-test('with function props', t => {
+test('With function props', t => {
   function App({ headerClass, bodyClass }) {
     return (
       <div>
@@ -100,7 +100,7 @@ test('with function props', t => {
   );
 });
 
-test('with conditional function array', t => {
+test('With conditional function array', t => {
   function App({ list }) {
     return (
       <ul>
@@ -130,7 +130,7 @@ test('with conditional function array', t => {
   );
 });
 
-test('with fragment', t => {
+test('With fragment', t => {
   function App() {
     return (
       <>
@@ -148,7 +148,7 @@ test('with fragment', t => {
   t.snapshot(format(<App />));
 });
 
-test('with render props', t => {
+test('With render props', t => {
   function RenderProps({ children }) {
     return <ul>{children([1, 2, 3, 4, 5])}</ul>;
   }
