@@ -22,7 +22,8 @@ async function renderHTML(tagName, attributes, children) {
   result.push(`<${tagName}`);
   if (attributes) {
     Object.keys(attributes).forEach(key => {
-      result.push(` ${cleanAttribute(key)}="${attributes[key]}"`);
+      const { key: cleanedKey, value } = cleanAttribute(key, attributes[key]);
+      result.push(` ${cleanedKey}="${value}"`);
     });
   }
   result.push('>');

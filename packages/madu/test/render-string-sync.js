@@ -159,6 +159,16 @@ test('With render props', t => {
   );
 });
 
+test('with style object', t => {
+  t.snapshot(
+    format(<div style={{ color: 'green', margin: 20, borderTop: 3 }} />)
+  );
+});
+
+test('with style string', t => {
+  t.snapshot(format(<div style="color: red;" />));
+});
+
 function format(html) {
   return pretty(html, { ocd: true });
 }
