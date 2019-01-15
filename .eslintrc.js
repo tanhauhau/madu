@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['airbnb-base', '@madu/eslint-config-madu'],
+  extends: ['airbnb-base', '@lihautan/eslint-config-madu'],
 };

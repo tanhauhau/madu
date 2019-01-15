@@ -1,5 +1,5 @@
 {
-  "name": "@madu/babel-transform-madu",
+  "name": "@lihautan/babel-transform-madu",
   "version": "1.0.1",
   "main": "index.js",
   "repository": "https://github.com/tanhauhau/madu.git",

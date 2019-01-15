@@ -9,7 +9,7 @@ Write `jsx` as if is `html` string.
 With Madu, you can think of `jsx` as `html` string.
 
 ```jsx
-const Madu = require('@madu/madu');
+const Madu = require('@lihautan/madu');
 const html = (
   <html>
     <body>
@@ -20,11 +20,11 @@ const html = (
 // html = "<html><body><h1>Hello World!</h1></body></html>"
 ```
 
-All you need to do is to add `"@madu/babel-transform-madu"` into your `.babelrc`;
+All you need to do is to add `"@lihautan/babel-transform-madu"` into your `.babelrc`;
 
 ```json
 {
-  "plugins": ["@madu/babel-transform-madu"]
+  "plugins": ["@lihautan/babel-transform-madu"]
 }
 ```
 
@@ -89,7 +89,7 @@ In async mode, `jsx` can be think of `Promise<string>`
 This allows you to fetch data in the component function.
 
 ```jsx
-const { MaduAsync: Madu } = require('@madu/madu');
+const { MaduAsync: Madu } = require('@lihautan/madu');
 
 function MovieList({ movies }) {
   return (
